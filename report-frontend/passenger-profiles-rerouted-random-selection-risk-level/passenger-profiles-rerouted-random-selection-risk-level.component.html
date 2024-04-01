@@ -1,0 +1,20 @@
+
+<app-cms-page-view>
+  <ng-container mainContent>
+
+
+    <div class="row d-flex justify-content-between align-items-center">
+      <div class="d-flex justify-content-start">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="d-flex">
+          <formly-form [form]="form" [fields]="fields" [model]="model"  class="mr-3"></formly-form>
+          <button type="submit" class="btn btn-primary find">Find</button>
+        </form>
+      </div>
+    </div>
+
+    <ng-container>
+      <iframe [src]="pdfUrl" width="100%" height="600px"></iframe>
+
+    </ng-container>
+  </ng-container>
+</app-cms-page-view>

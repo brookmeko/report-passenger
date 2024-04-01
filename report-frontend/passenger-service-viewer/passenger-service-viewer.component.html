@@ -1,0 +1,18 @@
+<!--<app-rpt-feed-back-by-comment></app-rpt-feed-back-by-comment>-->
+
+<app-cms-page-view
+  [pageTitle]="'PAGES.REPORT.PASSENGER_SERVICE.TITLE' | translate"
+>
+  <ng-container mainContent>
+    <div class="row d-flex justify-content-between align-items-center">
+      <div class="col-6 d-flex justify-content-start p-2">
+        <form [formGroup]="form">
+          <formly-form [form]="form" [fields]="fields"></formly-form>
+        </form>
+      </div>
+    </div>
+    <ng-container>
+      <div #componentContainer></div>
+    </ng-container>
+  </ng-container>
+</app-cms-page-view>

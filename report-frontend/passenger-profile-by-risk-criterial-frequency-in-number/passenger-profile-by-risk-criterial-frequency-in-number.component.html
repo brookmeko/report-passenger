@@ -1,0 +1,27 @@
+<app-cms-page-view>
+  <ng-container mainContent>
+    <div class="row">
+      <div class="col-md-12">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <formly-form
+              [form]="form"
+              [fields]="fields"
+              [model]="model"
+              class="col-md-10"
+            ></formly-form>
+            <div class="col-md-2 pt-4">
+              <button type="submit" class="btn btn-primary">
+                {{ 'PAGES.REPORT.GENERATE' | translate }}
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <ng-container>
+      <iframe [src]="pdfUrl" width="100%" height="600px"></iframe>
+    </ng-container>
+  </ng-container>
+</app-cms-page-view>
